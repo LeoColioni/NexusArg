@@ -1,0 +1,48 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/"
+  to = "/nexusarg-landing.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin"
+  to = "/nexusarg-admin-panel.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin.html"
+  to = "/nexusarg-admin-panel.html"
+  status = 200
+
+[[redirects]]
+  from = "/tienda"
+  to = "/nexusarg-tienda.html"
+  status = 200
+
+[[redirects]]
+  from = "/tienda.html"
+  to = "/nexusarg-tienda.html"
+  status = 200
+
+[[redirects]]
+  from = "/apps"
+  to = "/nexusarg-apps.html"
+  status = 200
+
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
+[[redirects]]
+  from = "/api/instagram"
+  to = "/.netlify/functions/instagram-webhook"
+  status = 200
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
